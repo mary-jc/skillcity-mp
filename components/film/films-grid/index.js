@@ -16,8 +16,8 @@ export default function FilmGrid() {
     }
     return(
         <div className="w-full grid grid-cols-3 gap-4">
-            {films.map((film) => (
-                <FilmItem film={film} />
+            {films.map((film, index) => (
+                <FilmItem key={index} film={film} />
             ))}
         </div>
     )

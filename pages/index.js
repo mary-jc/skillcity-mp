@@ -27,6 +27,12 @@ export default function Home() {
 
       <Hero />
 
+      <Hero
+      imgUrl="/assets/profile.png"
+      title="Mary Judith Crucero"
+      subtitle="bio"
+      />
+
         <Footer title="Films" href="/films"/>
   
       
