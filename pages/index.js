@@ -1,8 +1,12 @@
 import Link from "next/link";
 import { router, useRouter } from "next/router";
 
-import Hero from "../components/home/hero";
 import Bio from "../components/home/bio";
+import Header from "@/components/shared/header";
+import Footer from "@/components/shared/footer";
+import Content from "@/components/shared/content";
+import Hero from "@/components/home/hero";
+import Topics from "@/components/home/topics";
 
 export default function Home() {
   const router = useRouter();
@@ -17,26 +21,40 @@ export default function Home() {
     // navigate to the books page
   }
 
+  return(
+    <div className="w-full">
+      <Header name="Home" />
 
-  return (
-    <div>  ///className="bg-gradient-to-r from-emerald-800 via-lime-700 to-teal-500"
-      <Hero name = "Mary Judith Crucero"/>
+      <Hero />
+
+        <Footer title="Films" href="/films"/>
+  
+      
 
       <Bio/>
 
-      <button className="bg-blue-500 text-white px-2 py-1 rounded"
-      onClick={handleClick}>
-        click me!!
-      </button>
+      <Content>
+        <div className="w-full flex flex-col">
+
+          <Topics />
+
+        <div>
+          <button className="bg-blue-500 text-white px-2 py-1 rounded mt-5"
+          onClick={handleClick}>
+          click me!!
+          </button>
+        </div>
+          
+        </div>
+        
+      </Content>
+
+      
 
 
-      <div>
-        <Link href="/films">
-          Go to film page
-        </Link>
-      </div>
+    </div>
 
 
-    </div>   
+
   )
 }
