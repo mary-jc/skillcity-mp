@@ -16,7 +16,8 @@ export default function Bio() {
         setDislikes(newValue);
     }
     return(
-           <div 
+        <div className="w-full max-w-6xl mx-auto">
+             <div 
            className="border rounded-full boder-4 border-solid border-teal-900 text-center py-1 mt-10"
            >
 
@@ -56,6 +57,8 @@ export default function Bio() {
             
             
             </div>
+        </div>
+          
 
     )
 }
