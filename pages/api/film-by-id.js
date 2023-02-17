@@ -1,5 +1,6 @@
 export default function handler(req, res) {
-    
+    const { id } = req.query;
+
     const films=[
         
         {
@@ -22,5 +23,14 @@ export default function handler(req, res) {
         }
     ];
 
-    res.json(films)
+    const foundFilm = films.find((film) => {
+        if (film.id === id) {
+            return true;
+        }
+        else{
+            return false;
+        }
+    });
+
+    res.json({film: foundFilm}); 
 }
