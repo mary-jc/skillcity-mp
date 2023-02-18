@@ -3,6 +3,7 @@ import Hero from "@/components/home/hero";
 import Footer from "@/components/shared/footer";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import Content from "@/components/shared/content";
 
 export default function SingleFilm() {
     const router = useRouter();
@@ -37,6 +38,15 @@ export default function SingleFilm() {
             title={film.title}
             subtitle={film.production} 
             />
+
+            <Content>
+                <div className="w-full flex flex-col">
+
+                    <a href={film.linkToPurchase} target="_blank">
+                        Buy on Amazon
+                    </a>
+                </div>
+            </Content>
 
             <Footer 
             title="Next book"
