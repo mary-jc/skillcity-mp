@@ -4,6 +4,7 @@ import Footer from "@/components/shared/footer";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import Content from "@/components/shared/content";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 export default function SingleFilm() {
     const router = useRouter();
@@ -42,14 +43,27 @@ export default function SingleFilm() {
             <Content>
                 <div className="w-full flex flex-col">
 
-                    <a href={film.linkToPurchase} target="_blank">
+                    <div>
+                        <CopyToClipboard text={film.linkToPurchase}>
+                     <button
+                        className="bg-blue-500 text-white px-4 py-2  rounded-lg "
+                        type="button">
+                        Copy link to Amazon
+                    </button>
+                        </CopyToClipboard>
+                        
+                    </div>
+
+                    
+
+                    <a href={film.linkToPurchase} target="_blank" className="mt-5">
                         Buy on Amazon
                     </a>
                 </div>
             </Content>
 
             <Footer 
-            title="Next book"
+            title="Next film"
             href={`/single-film/${+film.id + 1}`}
             />
             </div>
