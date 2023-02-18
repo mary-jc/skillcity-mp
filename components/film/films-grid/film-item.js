@@ -10,7 +10,7 @@ export default function FilmItem({film}) {
 
     return(
         <div className="border rounded-lg p-4">
-            <img src={film.imgUrl} className="rounded-lg h-50" />
+            <img src={film.img_url} className="rounded-lg h-50" />
             <p className="text-xl font-medium">{film.title}</p>
             <p className="text-gray-700">{film.production}</p>
             <button 
