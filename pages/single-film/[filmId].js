@@ -35,7 +35,7 @@ export default function SingleFilm() {
             />
 
             <Hero 
-            imgUrl={film.imgUrl}
+            imgUrl={film.img_url}
             title={film.title}
             subtitle={film.production} 
             />
