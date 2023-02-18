@@ -11,8 +11,9 @@ export default function FilmItem({film}) {
 
     return(
         <div className="border rounded-lg p-4">
-            <img src={film.img_url} className="rounded-lg h-50" />
+            
             <Link href={`/single-film/${film.id}`} className="text-xl font-medium">
+                <img src={film.img_url} className="rounded-lg h-50" />
                 {film.title}
             </Link>
             <p className="text-gray-700">{film.production}</p>
