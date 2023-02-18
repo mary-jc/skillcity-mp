@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState } from "react";
 
 export default function FilmItem({film}) {
@@ -11,7 +12,9 @@ export default function FilmItem({film}) {
     return(
         <div className="border rounded-lg p-4">
             <img src={film.img_url} className="rounded-lg h-50" />
-            <p className="text-xl font-medium">{film.title}</p>
+            <Link href={`/single-film/${film.id}`} className="text-xl font-medium">
+                {film.title}
+            </Link>
             <p className="text-gray-700">{film.production}</p>
             <button 
             onClick={handleLike}
